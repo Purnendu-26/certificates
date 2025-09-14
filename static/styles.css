@@ -1,0 +1,112 @@
+/* General page setup */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: 
+#37353E;
+  color: 
+#D3DAD9;
+}
+
+/* Container for dashboard */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: 
+#44444E;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  color: 
+#D3DAD9;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+/* Form styles */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+  margin-left: 5px;
+}
+
+input[type="file"] {
+  background: 
+#37353E;
+  border: 1px solid 
+#715A5A;
+  color: 
+#D3DAD9;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* Buttons */
+button, .download-btn {
+  background-color: 
+#715A5A;
+  color: 
+#D3DAD9;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, .download-btn:hover {
+  background-color: 
+#8a7070;
+}
+
+/* Preview section */
+.preview {
+  margin: 20px 0;
+}
+
+.preview img {
+  max-width: 100%;
+  border: 2px solid 
+#715A5A;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: none;
+}
+
+.spinner {
+  border: 6px solid 
+#D3DAD9; /* light grey /
+  border-top: 6px solid 
+#715A5A; / accent color /
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: none; / hide by default */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none !important;
+}

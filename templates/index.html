@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Certificate Generator</h1>
+
+    <!-- Upload form -->
+    <form id="uploadForm" class="upload-form" enctype="multipart/form-data">
+      <label for="excel">Upload Excel File:</label>
+      <input type="file" id="excel" name="excel" accept=".xlsx" required>
+
+      <label for="template">Upload Certificate Template:</label>
+      <input type="file" id="template" name="template" accept="image/*" required>
+
+      <button type="submit">Generate Certificates</button>
+    </form>
+
+    <!-- Spinner -->
+    <div id="spinner" class="spinner hidden"></div>
+
+    <!-- Template Preview -->
+    <div class="preview">
+      <h3>Template Preview</h3>
+      <img id="templatePreview" src="#" alt="No template selected yet">
+    </div>
+
+    <!-- Download Button -->
+    <div class="download">
+      <p id="statusMsg"></p>
+      <a href="/download" class="download-btn hidden" id="downloadBtn">Download Certificates</a>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
